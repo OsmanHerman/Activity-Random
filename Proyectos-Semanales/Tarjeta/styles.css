@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maskBody{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./assets/fondoContainer.jpg);
+    background-size: cover;
+    filter: blur(3px);
+    
+}
+
+/*STYLES CARD*/
+
+.card{
+    position: relative;
+    width: 400px;
+    height: 230px;
+}
+
+.container-front, .container-back{
+    border: solid 1px black;
+    border-radius: 20px;
+    width: 400px;
+    height: 230px;
+    display: grid;
+    gap: 20px;
+    background-image: url(./assets/fondoCard.jpg);
+    background-size: cover;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 0.5s linear;
+}
+
+.container-front{
+    
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.container-back{
+    transform: perspective(800px) rotateY(180deg);
+}
+
+.container-front-girar{
+    transform: perspective(800px) rotateY(180deg);
+}
+
+.container-back-girar{
+    transform: perspective(800px) rotateY(360deg);
+}
+
+.maskCard-front, .maskCard-back{
+    position: absolute;
+    width: 400px;
+    height: 230px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.089);
+}
+
+/*STYLES CARD-FRONT*/
+
+.image{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    transform: translateX(20px);
+    height: 50px;
+}
+
+#chip{
+    width: 60px;
+    height: 65px;
+    transform: translateY(40px);
+}
+
+#master/*, #visa*/{
+    width: 60px;
+    height: 35px;
+    transform: translate(-62px, 20px);
+    position: absolute;
+    z-index: 1;
+    
+    transition: all 0.2s linear;
+}
+
+#visa{
+    width: 65px;
+    height: 30px;
+    transform: translate(85px,23px);
+    position: absolute;
+    z-index: 1;
+    transition: all 0.2s linear;
+}
+
+#visa:target, #master:target{
+    opacity: 0;
+    z-index: -1;
+}
+
+.codigo{
+    font-size: 2em;
+    width: 91.5%;
+    border: 0;
+    margin: 0 18px 0 15px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    position: relative;
+    outline: none;
+}
+
+.dates{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px 0 15px;
+    position: relative;
+}
+
+.name input{
+    width: 140%;
+    height: 4vh;
+    font-size: 1em;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    outline: none;
+}
+
+.venc {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+.venc input{
+    text-align: center;
+    width: 30%;
+    height: 4vh;
+    font-size: 1em;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    outline: none;
+}
+
+h5{
+    color: grey;
+}
+
+/*STYLES CARD-BACK*/
+
+.barra{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    transform: translateY(30px);
+}
+
+.panelFirma-cvv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.panelfirma{
+    border: solid 0px black;
+    width: 55%;
+    height: 30px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 5%, rgba(255,201,0,1) 10%, rgba(255,255,255,1) 15%, rgba(213,213,213,1) 20%, rgba(255,201,0,1) 25%, rgba(255,255,255,1) 30%, rgba(213,213,213,1) 35%, rgba(255,201,0,1) 40%, rgba(255,255,255,1) 45%, rgba(213,213,213,1) 50%, rgba(255,201,0,1) 55%, rgba(255,255,255,1) 60%, rgba(213,213,213,1) 65%, rgba(255,201,0,1) 70%, rgba(255,255,255,1) 75%, rgba(213,213,213,1) 80%, rgba(255,201,0,1) 85%, rgba(255,255,255,1) 90%, rgba(213,213,213,1) 95%, rgba(255,201,0,1) 100%);
+  }
+
+#cardCvv{
+    text-align: center;
+    width: 15%;
+    height: 4.5vh;
+    font-size: 1.2em;
+    font-weight: 600;
+    border: none;
+    background-color: rgba(133, 133, 133, 0.562);
+    color: white;
+    outline: none;
+    position: relative;
+}
+
+#cardCvv::placeholder{
+    color: rgba(255, 255, 255, 0.493);
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#textBack{
+    width: 85%;
+    font-size: 0.6em;
+    transform: translateY(-10px);
+}
+#textBack-link{
+    text-decoration: underline;
+    width: 85%;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+
+
+
+/*STYLES BUTTON FRONT-BACK*/
+
+.circle{
+    border: solid 2px rgba(21, 13, 124, 0.856);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(180px);
+    background-color: rgba(17, 64, 153, 0.308);
+    /*background-color: rgba(255, 255, 255, 0.308);*/
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.circle:hover{
+    box-shadow: 0px 0px 20px 2px rgba(28, 18, 168, 0.856);
+}
+
+#arrow-event{
+    display: none;
+    /*width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;*/
+}
+
+.arrow{
+    width: 55px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+
+#arrow-event:checked ~ .circle .arrow{
+    transform: perspective(30px) rotateY(180deg);
+}
+
+

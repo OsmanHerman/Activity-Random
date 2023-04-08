@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.labels{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /*Mozilla*/
+    -ms-overflow-style: none; /*Internet Explorer*/
+}
+.labels::-webkit-scrollbar { /*Chrome and Safari*/
+    display: none;
+}
+
+.labels label{
+    display: inline-block;
+    width: 100vw;
+    height: 100%;
+}
+
+.labels label img{
+    object-fit: cover;
+    height: 100%;
+    width: 100vw;
+}
+
+.input{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 4px;
+    position: absolute;
+}
+
+.input input{
+    cursor: pointer;
+}
+
+.arrow{
+    position: absolute;
+    color: rgba(240, 255, 255, 0.658);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.arrow h1 {
+    padding: 0 5px;
+    user-select: none;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+.right:hover, .left:hover{
+    background-color: #0000002a;
+    color: azure;
+}
+

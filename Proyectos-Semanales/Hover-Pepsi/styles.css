@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: solid 1px black;*/
+    width: 35%;
+    height: 50vh;
+    padding: 0px 30px 0px 30px;
+    /*background-color: rgb(220, 220, 220,0.5);*/
+    background-color: transparent;
+    border-radius: 100px;
+    transition: all 0.2s linear;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.856);
+    z-index: 0;
+    /*transform: translateX(70%);*/
+    zoom: 1;
+    transition: all 0.08s linear;
+
+}
+
+.card{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    /*border: solid 1px black;*/
+    position: relative;
+    color: rgba(255, 255, 255, 0);
+    transform: translateX(140px);
+    transition: all 0.2s linear;
+}
+
+img{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    transform: translateX(-110px);
+    transition: all 0.2s linear;
+}
+
+h2{font-size: 2em;}
+h3{font-size: 1.2em;}
+p{font-weight: 500;}
+
+a{
+    text-decoration: none;
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0);
+    background-color: transparent;
+    font-weight: 500;
+    transition: all 0.2s linear;
+
+}
+
+.container:hover{
+    background-color: #1443c4;
+    border-radius: 20px;
+}
+.container:hover img{
+    width: 54%;
+    transform: translateX(55px);
+}
+
+.container:hover .card{
+    color: rgb(255, 255, 255);
+    transform: translateX(0px);
+}
+
+.container:hover a{
+    color: black;
+    background-color: white;
+}
+ .container:hover .circle{
+    background-color: transparent;
+    width: 270px;
+    height: 250px;
+ }
+
+

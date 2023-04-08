@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Card of Credit/Debit</title>
+</head>
+
+<body>
+    <div class="maskBody"></div>
+    <div class="card">
+        <div id="front" class="container-front">
+            <div class="maskCard-front"></div>
+            <div class="image">
+                <img id="chip" src="./assets/chip.png" alt="">
+                <a href="#visa"><img id="visa" src="./assets/visa.png" alt=""></a>
+                <a href="#master"><img id="master" src="./assets/mastercard.png" alt=""></a>
+            </div>
+            <input class="codigo" id="cardNumber" type="" placeholder="0000 0000 0000 0000" required>
+            <div class="dates">
+                <div class="name">
+                    <h5>Nombre del titular</h5>
+                    <input id="cardName" type="text" placeholder="Ej: Osman Herman"required>
+                </div>
+                <div class="venc">
+                    <h5>Vencimiento</h5>
+                    <input id="cardDate" type="text" placeholder="mm/aa" required>
+                </div>
+            </div>
+        </div>
+        <div id="back" class="container-back">
+            <div class="maskCard-back"></div>
+            <div class="barra"></div>
+            <div class="panelFirma-cvv">
+                <div class="panelfirma"></div>
+                <input type="text" id="cardCvv" placeholder="CVV" maxlength="3" pattern="[0-9]+" required>
+            </div>
+            <div class="text">
+                <h5 id="textBack">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, libero ex doloribus corrupti veritatis, quam, non quos hic repellendus excepturi expedita.</h5>
+                <h5 id="textBack-link">www.tubanco.com</h5>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="arrow-event">
+    <label for="arrow-event" id="click" class="circle">
+        <img class="arrow" src="./assets/flecha.png" alt="">
+    </label>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js" integrity="sha512-SvgzybymTn9KvnNGu0HxXiGoNeOi0TTK7viiG0EGn2Qbeu/NFi3JdWrJs2JHiGA1Lph+dxiDv5F9gDlcgBzjfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./main.js"></script>
+
+</body>
+</html>
