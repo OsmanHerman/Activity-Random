@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 15, 15);
+    font-family: "Montserrat";
+}
+
+.container{
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 1% 1%;
+}
+
+.logos{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logos > div {
+    height: 65%;
+    width: 45%;
+    border-radius: 10px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    background-color: #ececec;
+    border: 0;
+    transition: 200ms linear;
+    user-select: none;
+}
+
+.logos div img {
+    filter: invert(0%);
+    transition: 200ms linear;
+}
+
+/*.logos > div:hover {
+    background-color: #191919;
+}
+
+.logos > div:hover img {
+    filter: invert(100%);
+}*/
+
+.logos div.activated {
+    background-color: #191919;
+}
+
+.logos div.activated img {
+    filter: invert(100%);
+}
+
+.logos > div:hover {
+    background-color: #191919;
+}
+
+.logos > div:hover img {
+    filter: invert(100%);
+}
+
+
+
+
+/*-----------------------------------------------------*/
+
+.inputs {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.inputs > form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input {
+    background-color: #ececec;
+    border: 0;
+    
+    padding: .7em;
+    border-radius: 10px;
+}
+
+.exp-cvv{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exp{width: 75%;}
+.cvv{width: 25%;}
+#name, #number{width: 95%;}
+#exp{width: 80%;}
+#cvv {width: 80%;}
+
+input::placeholder {color: rgb(73, 73, 73);}
+
+input:focus{background-color: white;}
+
+form h4 {
+    font-family: 'Lexend';
+    font-size: .9rem;
+}
+
+/*--------------------------------------------------------*/
+
+.submit{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    height: 45px;
+    width: 90%;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.button:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+img{
+    width: 25px ;
+}
