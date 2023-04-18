@@ -1,0 +1,186 @@
+@import url('https//:fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+*{
+    padding: 0;
+    margin: 0;
+    /*color: white;*/
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fondo1{background-color: #754a4a; transition: background-color 0.2s linear;}
+.fondo2{background-color: #393a44; transition: background-color 0.2s linear;}
+.fondo3{background-color: #647696; transition: background-color 0.2s linear;}
+.fondo4{background-color: #7295a3; transition: background-color 0.2s linear;}
+.fondo5{background-color: #75685c; transition: background-color 0.2s linear;}
+.fondo6{background-color: #727272; transition: background-color 0.2s linear;}
+
+/*--------------------------------------------------------*/
+
+.container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.img{
+    width: 500px;
+    height: 500px;
+    /*background-image: url(https://assets.codepen.io/1462889/ch1.png);*/
+    background-size: cover;
+    background-position: center;
+}
+
+.img1{background-image: url(https://assets.codepen.io/1462889/ch1.png);}
+.img2{background-image: url(https://assets.codepen.io/1462889/ch2.png);}
+.img3{background-image: url(https://assets.codepen.io/1462889/ch3.png);}
+.img4{background-image: url(https://assets.codepen.io/1462889/ch4.png);}
+.img5{background-image: url(https://assets.codepen.io/1462889/ch5.png);}
+.img6{background-image: url(https://assets.codepen.io/1462889/ch6.png);}
+
+/*---------------------------------------------------------*/
+
+.panel{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 100px;
+}
+
+.price{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price h4{
+    color: rgb(179, 179, 179);
+    text-decoration: line-through;
+}
+
+.title{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desc{
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.desc2{
+    font-size: 1em;
+    color: rgb(179, 179, 179);
+}
+
+.det{
+    color: rgb(179, 179, 179);
+    cursor: pointer;
+}
+
+.det2{
+    font-size: 1.3em;
+    color: white;
+}
+
+.text{
+    width: 45%;
+    height: 15%;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+}
+
+.text-details{
+    transform: scale(0);
+    display: none;
+}
+
+.text-details2{
+    transform: scale(1);
+    display: block;
+}
+
+.text-description2{
+    transform: scale(0);
+    display: none;
+}
+
+.colours{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.tinte{
+    border: solid 1px black;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.one{background-image: url(https://assets.codepen.io/1462889/mat1.jpg);}
+.two{background-image: url(https://assets.codepen.io/1462889/mat2.jpg);}
+.three{background-image: url(https://assets.codepen.io/1462889/mat3.jpg);}
+.four{background-image: url(https://assets.codepen.io/1462889/mat4.jpg);}
+.five{background-image: url(https://assets.codepen.io/1462889/mat5.jpg);}
+.six{background-image: url(https://assets.codepen.io/1462889/mat6.jpg);}
+
+.colours input[type="radio"]{
+    display: none;
+}
+
+.colours input[type="radio"]:checked + label div{
+    border: solid 3px;
+}
+
+
+
+.button{
+    border: solid 1px rgba(0, 0, 0, 0.479);
+    border-radius: 5px;
+    width: 27%;
+    height: 6%;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.315);
+    transition: all 0.2s linear;
+}
+
+.button:hover{
+    border: solid 1px rgba(0, 0, 0, 0.801);
+    
+    background-color: rgba(0, 0, 0, 0.801);
+}
+
+
+.button img{
+    width: 25px;
+    height: 25px;
+
+}
+
+.button span{
+    width: 10px;
+}
