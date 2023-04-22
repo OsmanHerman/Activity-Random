@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    /*font-family: 'Tilt Prism', cursive;*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 7, 7);
+}
+
+.container{
+    width: 250px;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgb(34, 34, 34);
+}
+
+.container > input{
+    display: none;
+}
+
+.container > label{
+    position: relative;
+    cursor: pointer;
+    /*transition: opacity 0.4s ease-out;*/
+}
+
+.container > label:hover{
+    color: rgb(143, 143, 143);
+}
+
+.container > div{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /*background-color: green;*/
+    border-radius: 50%;
+    /*transform: translateX(-67px);*/
+    display: none;
+    transition: all 0.4s ease-out;
+}
+
+.container > input:checked ~ .circle{
+    display: block;
+}
+
+#green:checked ~ .circle{
+    background-color: green;
+    transform: translateX(-68px);
+}
+
+#blue:checked ~ .circle{
+    background-color: blue;
+    transform: translateX(0px);
+}
+
+#pink:checked ~ .circle{
+    background-color: pink;
+    transform: translateX(68px);
+}
+
+/*#green:checked ~ .lab-green{opacity: 0;}
+#blue:checked ~ .lab-blue{opacity: 0;}
+#pink:checked ~ .lab-pink{opacity: 0;}*/
