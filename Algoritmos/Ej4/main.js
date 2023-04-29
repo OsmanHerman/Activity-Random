@@ -6,13 +6,12 @@ let cadena = "Hola soy pancrasio y estoy en una cadena de texto y soy como soy p
 function contadorDePalabras(text) {
     const palabras = text.toLowerCase().split(' ');
     return palabras.reduce((cont, palabra) => {
-      cont[palabra] = (cont[palabra] || 0) + 1;
+      cont[palabra] = (cont[palabra] || 0) + 1; 
       return cont;
     }, {});
   }
 
   console.log(contadorDePalabras(cadena));
-
 
 //------------------------------------------------------------------------
 

@@ -32,7 +32,7 @@ body{
 .container > label{
     position: relative;
     cursor: pointer;
-    /*transition: opacity 0.4s ease-out;*/
+    transition: opacity 0.4s ease-out;
 }
 
 .container > label:hover{
@@ -45,8 +45,8 @@ body{
     height: 40px;
     /*background-color: green;*/
     border-radius: 50%;
-    /*transform: translateX(-67px);*/
     display: none;
+    /*transform: translateX(-67px);*/
     transition: all 0.4s ease-out;
 }
 
@@ -69,6 +69,6 @@ body{
     transform: translateX(68px);
 }
 
-/*#green:checked ~ .lab-green{opacity: 0;}
+#green:checked ~ .lab-green{opacity: 0;}
 #blue:checked ~ .lab-blue{opacity: 0;}
-#pink:checked ~ .lab-pink{opacity: 0;}*/
+#pink:checked ~ .lab-pink{opacity: 0;}
